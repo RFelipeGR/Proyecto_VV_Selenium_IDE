@@ -1,0 +1,173 @@
+{
+  "id": "0a58c378-8a9b-4f18-959c-8a126829baf3",
+  "version": "2.0",
+  "name": "Proyecto_VV_Guaña_Roberto",
+  "url": "https://www.saucedemo.com/",
+  "tests": [{
+    "id": "e7c7f474-f84d-490a-8563-99c337943fbd",
+    "name": "Untitled",
+    "commands": []
+  }, {
+    "id": "9b85dc6e-f700-456a-8d60-f0a04ccf6e45",
+    "name": "CP01_Flujo_Autenticacion",
+    "commands": [{
+      "id": "52c46e2b-e441-4b8d-a7c8-38ca83af25fc",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0b6dc69e-11c2-4a62-9b70-5674a9b7d66e",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var input = document.querySelector('#user-name'); var setter = Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, 'value').set; setter.call(input, 'standard_user'); input.dispatchEvent(new Event('input', { bubbles: true })); input.dispatchEvent(new Event('change', { bubbles: true }));",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "15673eba-4c13-4085-bee8-aec67075fc9e",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var input = document.querySelector('#password'); var setter = Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, 'value').set; setter.call(input, 'secret_sauce'); input.dispatchEvent(new Event('input', { bubbles: true })); input.dispatchEvent(new Event('change', { bubbles: true }));",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7c6185d2-5a09-4fc9-9a5c-5d47e5896d8d",
+      "comment": "",
+      "command": "click",
+      "target": "css=#login-button",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "48d7678c-6fce-4338-ab59-94068627911f",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.title",
+      "targets": [],
+      "value": "Products"
+    }]
+  }, {
+    "id": "1f108a73-6ee9-4065-8444-afe34da8aa3b",
+    "name": "CP02_Login_Fallido",
+    "commands": [{
+      "id": "c6dabb88-4fa7-4a55-8f8a-a51af65a15f3",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d2aa4c6a-6c10-4f1f-91f8-c468c22ef21d",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var input = document.querySelector('#user-name'); var setter = Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, 'value').set; setter.call(input, 'usuario_error'); input.dispatchEvent(new Event('input', { bubbles: true })); input.dispatchEvent(new Event('change', { bubbles: true }));",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cf465a36-0e3f-4619-bb5a-7583cc3c24f1",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var input = document.querySelector('#password'); var setter = Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, 'value').set; setter.call(input, 'clave_error'); input.dispatchEvent(new Event('input', { bubbles: true })); input.dispatchEvent(new Event('change', { bubbles: true }));",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cc433133-e82b-49b3-9d5b-3c4dea545b90",
+      "comment": "",
+      "command": "click",
+      "target": "css=#login-button",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5dbbe0f5-1e00-4d85-9478-18c0a7568532",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=h3[data-test='error']",
+      "targets": [],
+      "value": "Epic sadface: Username and password do not match any user in this service"
+    }]
+  }, {
+    "id": "0f57eabc-9b73-461f-9159-5082d353920a",
+    "name": "CP03_Elementos_Dinamicos_Carrito",
+    "commands": [{
+      "id": "fff6cfcf-8031-4c11-9b1c-ca83a13a7086",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5bf42a89-ea32-4201-bd5e-360cfaea1985",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var input = document.querySelector('#user-name'); var setter = Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, 'value').set; setter.call(input, 'standard_user'); input.dispatchEvent(new Event('input', { bubbles: true })); input.dispatchEvent(new Event('change', { bubbles: true }));",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cf096bbd-5e5d-484a-8364-de0e65156622",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var input = document.querySelector('#password'); var setter = Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, 'value').set; setter.call(input, 'secret_sauce'); input.dispatchEvent(new Event('input', { bubbles: true })); input.dispatchEvent(new Event('change', { bubbles: true }));",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "55fb713a-a140-425e-b6b5-df672394f8a9",
+      "comment": "",
+      "command": "click",
+      "target": "css=#login-button",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cfdec480-129f-459e-b261-02dc867b19c1",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=#add-to-cart-sauce-labs-backpack",
+      "targets": [],
+      "value": "3000"
+    }, {
+      "id": "d810c993-e0f9-42fc-bdb5-33ee92b3ddd8",
+      "comment": "",
+      "command": "click",
+      "target": "css=#add-to-cart-sauce-labs-backpack",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "338ccfea-e425-4912-af09-085c42eb24d7",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.shopping_cart_badge",
+      "targets": [],
+      "value": "1"
+    }, {
+      "id": "6d404df3-eefb-4e6d-a7d2-5574ed1d4c77",
+      "comment": "",
+      "command": "click",
+      "target": "css=#remove-sauce-labs-backpack",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7bd745ad-9013-4c8d-8eaa-c7a2b0ebe43a",
+      "comment": "",
+      "command": "verifyElementNotPresent",
+      "target": "css=.shopping_cart_badge",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "4fb8b459-91ad-4540-a568-352db35bfb5c",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["e7c7f474-f84d-490a-8563-99c337943fbd"]
+  }, {
+    "id": "e3c7297e-9b7a-4737-ad3f-f343958c82f1",
+    "name": "Suite_Regresion_Basica",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["9b85dc6e-f700-456a-8d60-f0a04ccf6e45", "1f108a73-6ee9-4065-8444-afe34da8aa3b", "0f57eabc-9b73-461f-9159-5082d353920a"]
+  }],
+  "urls": ["https://www.saucedemo.com/"],
+  "plugins": []
+}
